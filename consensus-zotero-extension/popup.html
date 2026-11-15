@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consensus → Zotero</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="mark">Z</div>
+      <div>
+        <h1>Consensus <span>→</span> Zotero</h1>
+        <p>Salvar artigos na sua biblioteca pessoal</p>
+      </div>
+    </header>
+
+    <section id="connectedPanel" class="panel hidden">
+      <div class="connection-line"><span class="dot"></span><strong>Conta conectada</strong></div>
+      <p id="accountLabel" class="account"></p>
+      <p class="help">A chave fica armazenada localmente no navegador. Ela não é compartilhada com o Consensus.</p>
+      <button id="disconnectButton" class="button secondary">Desconectar</button>
+    </section>
+
+    <section id="setupPanel" class="panel hidden">
+      <label for="apiKey">Zotero API Key</label>
+      <input id="apiKey" type="password" autocomplete="off" spellcheck="false" placeholder="Cole sua chave de API">
+      <p class="help">Crie uma chave com acesso de leitura e escrita à sua biblioteca pessoal.</p>
+      <button id="connectButton" class="button primary">Conectar ao Zotero</button>
+      <a class="key-link" href="https://www.zotero.org/settings/keys" target="_blank" rel="noreferrer">Criar ou gerenciar API Key ↗</a>
+    </section>
+
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+    <footer>Versão 0.1.0 · Chrome e Microsoft Edge</footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
