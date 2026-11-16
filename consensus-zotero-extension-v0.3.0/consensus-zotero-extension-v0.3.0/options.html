@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Opções · Consensus → Zotero</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <div class="mark">Z</div>
+      <div>
+        <h1>Consensus → Zotero</h1>
+        <p>Preferências de salvamento</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="section-title">Coleção padrão</div>
+      <p class="description">O botão <strong>+Zotero</strong> salva diretamente nesta coleção. Use a pequena seta ao lado do botão para escolher outra coleção em uma publicação específica.</p>
+      <div id="connectionNotice" class="notice hidden">Conecte primeiro sua conta Zotero pelo ícone da extensão no navegador. Depois volte aqui para escolher a coleção padrão.</div>
+      <div id="settingsPanel" class="hidden">
+        <label for="defaultCollection">Salvar novos artigos em</label>
+        <select id="defaultCollection" disabled>
+          <option value="">Biblioteca principal (sem coleção)</option>
+        </select>
+        <div class="actions">
+          <button id="refreshButton" class="button secondary" type="button">Atualizar coleções</button>
+          <button id="saveButton" class="button primary" type="button">Salvar preferência</button>
+        </div>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card info">
+      <div class="section-title">Como funciona</div>
+      <p><strong>+Zotero:</strong> adiciona imediatamente à coleção padrão.</p>
+      <p><strong>Seta ▾:</strong> abre a lista de coleções e salva na coleção escolhida.</p>
+      <p>A escolha é armazenada localmente no perfil do navegador e aplicada em todos os sites suportados.</p>
+    </section>
+    <footer>Versão 0.3.0 · Chrome e Microsoft Edge</footer>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>
