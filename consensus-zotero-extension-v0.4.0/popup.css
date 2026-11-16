@@ -17,7 +17,8 @@ input:focus { border-color: #315fbc; box-shadow: 0 0 0 3px rgba(49,95,188,.12); 
 .button:disabled { opacity: .6; cursor: wait; }
 .primary { color: #fff; background: #315fbc; }
 .primary:hover { background: #264f9f; }
-.secondary { color: #334155; background: #edf1f5; }
+.secondary { color: #334155; background: #edf1f5; margin-top: 8px; }
+#optionsButton { margin-top: 14px; }
 .connection-line { display: flex; align-items: center; gap: 8px; font-size: 12px; }
 .dot { width: 8px; height: 8px; border-radius: 100%; background: #16a36a; }
 .account { margin: 8px 0 0; font-size: 12px; font-weight: 600; }

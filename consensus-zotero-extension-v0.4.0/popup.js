@@ -4,6 +4,7 @@ const statusBox = document.getElementById("status");
 const apiKeyInput = document.getElementById("apiKey");
 const connectButton = document.getElementById("connectButton");
 const disconnectButton = document.getElementById("disconnectButton");
+const optionsButton = document.getElementById("optionsButton");
 
 function setStatus(message, kind = "") {
   statusBox.textContent = message || "";
@@ -52,6 +53,8 @@ connectButton.addEventListener("click", async () => {
     connectButton.textContent = "Conectar ao Zotero";
   }
 });
+
+optionsButton.addEventListener("click", () => chrome.runtime.openOptionsPage());
 
 disconnectButton.addEventListener("click", async () => {
   disconnectButton.disabled = true;

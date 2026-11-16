@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "Consensus → Zotero",
+  "version": "0.4.0",
+  "description": "Adiciona publicações do Consensus, Elicit, Scopus, ScienceDirect, Connected Papers e IEEE Xplore à biblioteca pessoal do Zotero. Detecta referências já salvas e permite escolher a coleção de destino.",
+  "minimum_chrome_version": "102",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.zotero.org/*",
+    "https://api.crossref.org/*"
+  ],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_title": "Consensus → Zotero",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://consensus.app/*",
+        "https://www.consensus.app/*",
+        "https://elicit.com/*",
+        "https://www.elicit.com/*",
+        "https://www.scopus.com/*",
+        "https://scopus.com/*",
+        "https://www.sciencedirect.com/*",
+        "https://sciencedirect.com/*",
+        "https://connectedpapers.com/*",
+        "https://www.connectedpapers.com/*",
+        "https://ieeexplore.ieee.org/*"
+      ],
+      "js": [
+        "adapters.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "options_page": "options.html"
+}
